@@ -1,0 +1,21 @@
+{
+  "base_url": "http://127.0.0.1:3000",
+  "checks": {
+    "title": "Symphony Runtime",
+    "h1": "Symphony Runtime",
+    "runtime_overview_visible": true,
+    "running_sessions_visible": true,
+    "retry_queue_visible": true,
+    "refresh_button_visible": true,
+    "tick_visible": true,
+    "live_issue_identifier": "N14-5",
+    "console_errors": []
+  },
+  "screenshots": [
+    "artifacts\\screenshots\\dashboard-desktop.png",
+    "artifacts\\screenshots\\dashboard-mobile.png",
+    "artifacts\\screenshots\\api-state-json.png",
+    "artifacts\\screenshots\\api-issue-not-found.png",
+    "artifacts\\screenshots\\api-issue-live-json.png"
+  ]
+}
