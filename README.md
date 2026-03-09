@@ -4,7 +4,7 @@ Symphony is a TypeScript workflow service for running jobs with visible state, e
 This repo is a fork, and the point of the fork is clear: make the system easier to inspect, safer to complete, and easier to connect to outside tools without guessing what happened during a run.
 
 ![Symphony dashboard](artifacts/screenshots/dashboard-desktop.png)
-![Symphony API state](artifacts/screenshots/api-state-json.png)
+
 
 ## What Changed In This Fork
 
