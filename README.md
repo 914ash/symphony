@@ -1,7 +1,5 @@
 # Symphony
 
-![Symphony cover](assets/covers/cover.svg)
-
 Symphony is a TypeScript workflow service for running issue-driven coding-agent work as an inspectable, long-lived system instead of a collection of ad hoc scripts. It reads a repo-owned `WORKFLOW.md`, polls Linear for eligible work, creates a dedicated workspace per issue, launches Codex app-server sessions, and keeps reconciling tracker state while the run is active. When you enable the server, it also exposes a dashboard and JSON endpoints so operators can see what is running, what is retrying, which session is attached to which ticket, and what happened most recently without digging through local process state.
 
 This repository is a forked implementation effort, not a claim that the Symphony model originated here. The project lineage matters: the original Symphony specification and public framing are preserved in [upstream.SPEC.md](upstream.SPEC.md), [upstream.README.md](upstream.README.md), and [upstream.elixir.README.md](upstream.elixir.README.md). Those upstream materials define the service shape and reference posture. This repo builds on that lineage with a smaller TypeScript implementation focused on inspectability, verification-aware completion, and public-safe operational documentation.
