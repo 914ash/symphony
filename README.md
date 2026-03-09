@@ -1,26 +1,17 @@
 # Symphony
 
-![Symphony cover](assets/covers/cover.svg)
-
-Fork-oriented Node.js/TypeScript implementation of the Symphony service specification, with emphasis on verification gating, observability, and operator control.
+Symphony is a TypeScript workflow service for running jobs with visible state, explicit verification gates, and an optional dashboard.
+This repo is a fork, and the point of the fork is clear: make the system easier to inspect, safer to complete, and easier to connect to outside tools without guessing what happened during a run.
 
 ![Symphony dashboard](artifacts/screenshots/dashboard-desktop.png)
 ![Symphony API state](artifacts/screenshots/api-state-json.png)
 
-See [docs/landing.md](docs/landing.md) for the full landing page, screenshot tour, and fork positioning.
+## What Changed In This Fork
 
-This repo belongs in the portfolio because it shows how frontier AI orchestration becomes operational software: workers, workflow control, verification evidence, and external-system write-back. That is directly relevant to defense and mission-support environments where autonomy without observability is not acceptable.
-
-## What This Fork Emphasizes
-
-- verification-aware completion logic
-- Linear write-back controls and safe done-state transitions
-- dashboard and API observability for active runs
-- workflow-driven orchestration in a TypeScript service surface
-
-## Why This Repo Exists
-
-The point of this fork is not to claim greenfield authorship. It is to show how a frontier-AI workflow system changes when the design target becomes operational trust: visible state, auditable transitions, and clearer operator control over autonomous execution.
+- added verification-aware completion logic
+- made active runs easier to inspect through the dashboard and JSON APIs
+- tightened write-back and done-state handling for external systems such as Linear
+- kept the workflow service small enough to read without losing the operational details
 
 The upstream specification and reference material are preserved locally in:
 
@@ -28,7 +19,7 @@ The upstream specification and reference material are preserved locally in:
 - `upstream.README.md`
 - `upstream.elixir.README.md`
 
-## Quick Start
+## Run Locally
 
 1. Install dependencies: `npm install`
 2. Copy `.env.example` to `.env` or set `LINEAR_API_KEY` in your shell
@@ -50,12 +41,12 @@ The upstream specification and reference material are preserved locally in:
 - `/api/v1/:issue`
 - `/api/v1/refresh`
 
-## Why It Matters
+## What To Look At First
 
-This project is part of the frontier-AI investigation side of the portfolio:
+1. Open the dashboard screenshot above to see the operator view.
+2. Read [docs/landing.md](docs/landing.md) for the short walkthrough.
+3. Review [docs/fork-notes.md](docs/fork-notes.md) for the fork-specific framing.
 
-- it deals with how agentic systems should be supervised
-- it makes verification evidence part of the workflow contract
-- it connects autonomous execution to operator trust and downstream systems
+## Why It Is Worth Reviewing
 
-See [docs/landing.md](docs/landing.md) and [docs/fork-notes.md](docs/fork-notes.md) for contribution framing and publication notes.
+Many workflow tools only look clean from the outside. This fork spends its effort on the messy part: when a run is in progress, when it should stop, and what evidence should exist before it marks work done.

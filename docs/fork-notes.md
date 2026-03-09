@@ -2,25 +2,22 @@
 
 ## Positioning
 
-This repository is presented as a fork-oriented implementation effort, not as a claim of inventing the Symphony specification from scratch.
+This repo is a fork-oriented implementation effort, not a claim of inventing the Symphony specification from scratch.
 
-## Public Contribution Framing
+## What The Public Story Should Emphasize
 
-The public story should emphasize the work visible in this repo:
+- the TypeScript implementation choices visible in this repo
+- the dashboard and API surfaces used to inspect active runs
+- the verification-aware run lifecycle
+- the write-back and completion controls around outside systems such as Linear
 
-- TypeScript implementation choices
-- observability surfaces
-- verification-aware run lifecycle
-- Linear integration and write-back gating
-- operator dashboard behavior and workflow ergonomics
+## Publication Notes
 
-## Publication Safety
-
-- local `WORKFLOW.md` was moved out of the public repo path
-- runtime logs and pid files were quarantined
-- local worktree and workspace artifacts were quarantined
+- local `WORKFLOW.md` was removed from the public repo path
+- runtime logs and pid files were removed
+- local worktree and workspace artifacts were removed
 - `.env` is ignored and replaced with `.env.example`
 
-## Defense Relevance
+## Reader Takeaway
 
-The repo demonstrates an important principle for defense-oriented AI operations: autonomous systems need verifiable completion criteria, explicit state transitions, and human-auditable telemetry.
+The point of the fork is practical: make runs easier to inspect, make completion rules easier to trust, and keep the service small enough to read.

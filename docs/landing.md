@@ -1,36 +1,21 @@
-# Symphony Landing
+# Symphony Walkthrough
 
-![Symphony cover](../assets/covers/cover.svg)
-
-## What This Is
-
-Symphony is a fork-oriented workflow service focused on verification gating, observability, and operator control for autonomous execution.
-
-## Who It Is For
-
-This repo is for reviewers evaluating how frontier-AI orchestration ideas become operational software with visible state, explicit workflow contracts, and safer external-system write-back.
-
-## Why This Exists
-
-The point of this repo is contribution framing through execution quality. It shows what changed in the fork and why those changes matter: trust, visibility, and control are treated as product requirements instead of afterthoughts.
+Symphony is easier to judge as a fork once you look at the evidence first. The screenshots below show the two surfaces this repo cares about most: the operator dashboard and the JSON state it exposes under the hood.
 
 ## Screenshot Walkthrough
 
 ![Symphony dashboard](../artifacts/screenshots/dashboard-desktop.png)
-The dashboard visualizes run state and gives the orchestration surface an operator-facing interface.
+The dashboard gives active runs a readable surface instead of hiding them behind logs and guesses.
 
 ![Symphony API state](../artifacts/screenshots/api-state-json.png)
-The API snapshot demonstrates that internal state is inspectable, not hidden behind opaque execution.
+The API view shows the same idea in a different form: state is inspectable, not buried.
 
-## Quick Evaluation
+## What To Review
 
-1. Read the top-level [README.md](../README.md).
-2. Review [fork-notes.md](fork-notes.md) for authorship and delta framing.
-3. Inspect the dashboard and API code paths for how observability is exposed.
+1. Read [README.md](../README.md) for the short version of the fork.
+2. Read [fork-notes.md](fork-notes.md) if you want the authorship and change framing.
+3. Inspect the dashboard and API code paths to see how the repo exposes run state.
 
-## Repo Signals
+## Notes
 
-- explicit fork attribution
-- visible API and dashboard evidence
-- verification-focused positioning
-- strong fit with frontier-AI investigation and defense-adjacent operator tooling
+This is not presented as a greenfield invention. The value is in the implementation work visible here: verification gates, observability, and safer completion behavior.
